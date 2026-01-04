@@ -142,6 +142,8 @@ const ServiceArea: React.FC = () => {
                 </select>
               </div>
 
+              
+
               {/* Botão de Enviar */}
               <div>
                 <button
@@ -160,7 +162,10 @@ const ServiceArea: React.FC = () => {
 
       </div>
     </section>
+
+    
   );
 };
+
 
 export default ServiceArea;
