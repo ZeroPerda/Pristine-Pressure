@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
                     {/* --- TÍTULO OTIMIZADO PARA MOBILE --- */}
                     {/* Alterado para text-3xl no mobile para evitar quebra excessiva */}
                     <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-md">
-                        East Bay’s Trusted Experts in Soft Wash & Exterior Cleaning
+                        Bridging the Gap: Trusted Exterior Cleaning & Soft Wash from Richmond to SF.
                     </h1>
                     
                     <p className="mt-6 text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-sm font-medium">

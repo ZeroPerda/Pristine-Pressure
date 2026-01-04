@@ -14,22 +14,13 @@ const ServiceArea: React.FC = () => {
     name: '',
     phone: '',
     address: '',
-    service: 'Pressure Washing (Driveway/Patio)' // Valor padrão
+    service: 'Pressure Washing (Driveway/Patio)' 
   });
-
-  // Lista de Cidades (SEO Local)
-  const cities = [
-    "Richmond", "San Francisco"
-  ];
 
   // Função que envia para o WhatsApp
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Formata a mensagem
     const message = `Hello! I would like a free estimate.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Address:* ${formData.address}%0A*Service:* ${formData.service}`;
-    
-    // Abre o WhatsApp com a mensagem pronta
     window.open(`https://wa.me/15102534469?text=${message}`, '_blank');
   };
 
@@ -41,27 +32,15 @@ const ServiceArea: React.FC = () => {
     <section id="quote-form" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* --- PARTE 1: ÁREA DE COBERTURA (CHIPS) --- */}
-        <div className="text-center mb-16">
+        {/* --- PARTE 1: ÁREA DE COBERTURA (TEXTO APENAS) --- */}
+        <div className="text-center mb-12">
           <MapMarkerIcon />
           <h2 className="text-3xl font-extrabold text-[#1F2937] mb-4">
             Proudly Serving the Bay Area
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Our team is based in Richmond, CA and provides professional exterior cleaning services to homeowners and businesses throughout the East Bay.
-          </p>
-          
-          {/* Lista de Cidades (Chips) */}
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {cities.map((city, index) => (
-              <span 
-                key={index} 
-                className="px-4 py-2 bg-white text-gray-700 rounded-full shadow-sm border border-gray-200 text-sm font-semibold hover:border-blue-400 hover:text-blue-500 transition-colors cursor-default"
-              >
-                {city}
-              </span>
-            ))}
-          </div>
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+    While our home base is <span className="font-semibold text-gray-800">Richmond</span>, our commitment to excellence reaches every corner of the Bay Area. We pride ourselves on being a neighborhood-focused business with the scale to handle diverse projects across the region, providing meticulous <span className="text-[#22C55E] font-medium">roof, solar, and masonry care</span> that reflects the high standards of our California communities.
+  </p>
         </div>
 
         {/* --- PARTE 2: FORMULÁRIO DE ORÇAMENTO --- */}
@@ -76,7 +55,6 @@ const ServiceArea: React.FC = () => {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {/* Nome */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
                   <input
@@ -91,7 +69,6 @@ const ServiceArea: React.FC = () => {
                   />
                 </div>
 
-                {/* Telefone */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone</label>
                   <input
@@ -107,7 +84,6 @@ const ServiceArea: React.FC = () => {
                 </div>
               </div>
 
-              {/* Endereço */}
               <div>
                 <label htmlFor="address" className="block text-sm font-medium text-gray-700">Address (City/Zip Code)</label>
                 <input
@@ -122,7 +98,6 @@ const ServiceArea: React.FC = () => {
                 />
               </div>
 
-              {/* Seleção de Serviço */}
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700">Service Needed</label>
                 <select
@@ -142,9 +117,6 @@ const ServiceArea: React.FC = () => {
                 </select>
               </div>
 
-              
-
-              {/* Botão de Enviar */}
               <div>
                 <button
                   type="submit"
@@ -159,13 +131,9 @@ const ServiceArea: React.FC = () => {
             </form>
           </div>
         </div>
-
       </div>
     </section>
-
-    
   );
 };
-
 
 export default ServiceArea;
